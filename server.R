@@ -1,12 +1,8 @@
 library(shiny)
-install.packages("HistData")
 library(HistData)
 data(GaltonFamilies)
-install.packages("dplyr")
 library(dplyr)
-install.packages("ggplot2")
 library(ggplot2)
-install.packages("plotly")
 library(plotly)
 
 # 1st step: pass inches to cm
