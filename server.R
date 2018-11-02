@@ -54,7 +54,7 @@ shinyServer(function(input, output) {
                   y = c(input$inFh, ch, input$inMh))
               ggplot(df, aes(x=x, y=y, fill = x)) +
               geom_bar(stat="identity", width=0.5) +
-              geom_text(aes(label=paste(round(y),"cm")), vjust= 1, hjust = 3, color="white", size=5)+
+              geom_text(aes(label=paste(round(y),"cm")), vjust= 1, hjust = 3, color="black", size=5)+
               xlab("") +
               ylab("Height (cm)") +
               theme_minimal() +
