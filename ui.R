@@ -36,8 +36,8 @@ shinyUI(fluidPage(
             mainPanel(
                   htmlOutput("pText"),
                   htmlOutput("pred"),
-                  plotOutput("Plot", width = "50%")
-                  #plotlyOutput("Plot")
+                  plotOutput("Plot")
+                
             )
       )
 ))
