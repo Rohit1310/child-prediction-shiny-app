@@ -52,12 +52,14 @@ shinyServer(function(input, output) {
             df <- data.frame(
                   x = factor(yvals, levels = yvals, ordered = TRUE),
                   y = c(input$inFh, ch, input$inMh))
-            ggplot(df, aes(x=x, y=y, fill = x)) +
+              ggplot(df, aes(x=x, y=y, fill = x)) +
               geom_bar(stat="identity", width=0.5) +
+              geom_text(aes(label=paste(round(y),"cm")), vjust= 1, hjust = 3, color="white", size=5)+
               xlab("") +
               ylab("Height (cm)") +
               theme_minimal() +
-              theme(legend.position="none")
+              theme(legend.position="none") +
+              coord_flip()
             
       })
       
